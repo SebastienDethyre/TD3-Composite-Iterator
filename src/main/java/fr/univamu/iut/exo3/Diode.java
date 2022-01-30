@@ -17,7 +17,7 @@ public class Diode extends Composant {
      * 
      */
     public void executer() {
-        // TODO implement here
+    	System.out.println("Allumage diode");
     }
 
 }

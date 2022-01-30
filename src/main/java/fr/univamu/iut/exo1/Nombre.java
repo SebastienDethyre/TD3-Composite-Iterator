@@ -13,7 +13,6 @@ public class Nombre extends Expression {
     }
     
     public double evaluer() {
-        // TODO implement here
         return valeur;
     }
 

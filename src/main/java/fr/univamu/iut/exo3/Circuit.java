@@ -1,46 +1,41 @@
 package fr.univamu.iut.exo3;
+
 import java.util.*;
 
-/**
- * 
- */
 public class Circuit extends Composant {
-
-    /**
-     * Default constructor
-     */
+	public static int NODE_MAX = 10;
+    private Composant[] membres;
     public Circuit() {
     }
 
-
-    /**
-     * 
-     */
     public void executer() {
-        // TODO implement here
+    	for (int i=0;i<membres.length;++i)
+    	{
+    		System.out.println(membres[i]);
+    	}	
+    	
     }
 
-    /**
-     * @param c
-     */
     public void ajouter(Composant c) {
-        // TODO implement here
+    	//if (membres == null) return;
+		int i=0;
+		while(i < NODE_MAX )
+		{++i;}
+		if (i>NODE_MAX)return;
+		membres[i]= c;
+		System.out.println(membres[i]);
     }
-
-    /**
-     * @param c
-     */
+    
     public void supprimer(Composant c) {
-        // TODO implement here
+    	for (int i=0;i<membres.length;++i)
+    	{
+    		if (membres[i]==c)
+    			membres[i]=null;
+    	}	
     }
 
-    /**
-     * @param index 
-     * @return
-     */
-    public Composant accederMembre(int index) {
-        // TODO implement here
-        return null;
+    public Composant accederMembre(int index) {     
+        return membres[index];
     }
 
 }
