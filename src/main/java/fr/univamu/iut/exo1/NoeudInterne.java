@@ -6,33 +6,31 @@ import java.util.*;
  * 
  */
 public class NoeudInterne extends Expression {
-	private int premierOperande;
-	private int deuxiemeOperande;
+	private Expression filsG;
+	private Expression filsD;
 	private char operateurBinaire;
     /**
      * Default constructor
      */
-    public NoeudInterne(int premierOperande, char operateurBinaire, int deuxiemeOperande) {
-    	this.premierOperande=premierOperande;
-    	this.deuxiemeOperande=deuxiemeOperande;
+    public NoeudInterne(Expression filsG, Expression filsD, char operateurBinaire) {
+    	this.filsG=filsG;
+    	this.filsD=filsD;
     	this.operateurBinaire=operateurBinaire;
     }
     
     /**
      * @return
      */
-    public double calculerValeur() {
+    public double evaluer() {
     	switch(operateurBinaire) {
     	case '+':
-    		return premierOperande + deuxiemeOperande;
+    		return filsG.evaluer() + filsD.evaluer();
     	case '-':
-    		return premierOperande - deuxiemeOperande;
+    		return filsG.evaluer() - filsD.evaluer();
     	case '*':
-    		return premierOperande * deuxiemeOperande;
-    	case '/':
-    		return premierOperande / deuxiemeOperande;
+    		return filsG.evaluer() * filsD.evaluer();
     	default:
-    		 return 0.0d;	
+    		return filsG.evaluer() / filsD.evaluer();	
         }      
     }
 }

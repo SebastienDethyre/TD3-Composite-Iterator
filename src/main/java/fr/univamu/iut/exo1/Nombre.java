@@ -6,29 +6,15 @@ import java.util.*;
  * 
  */
 public class Nombre extends Expression {
-
-    /**
-     * Default constructor
-     */
-    public Nombre() {
-    }
-
-    /**
-     * 
-     */
     private int valeur;
 
-    /**
-     * @return
-     */
-    public double calculerValeur() {
-        // TODO implement here
-        return 0.0d;
+    public Nombre(int nombre) {
+    	this.valeur = nombre;
     }
-
-    /**
-     * @return
-     */
-   
+    
+    public double evaluer() {
+        // TODO implement here
+        return valeur;
+    }
 
 }

@@ -1,11 +1,6 @@
 package fr.univamu.iut.exo1;
 import java.util.*;
 
-
-
-/**
- * 
- */
 public abstract class Expression {
 	public static int NODE_MAX_ARITY = 2;
 	protected Object data;
@@ -23,9 +18,7 @@ public abstract class Expression {
 	}
 	
 	public void setMother(Expression mother) {
-
 		this.mother[0]= mother;		
-
 	}
 		
 	public Expression getDaughter() {		
@@ -33,8 +26,7 @@ public abstract class Expression {
 	}
 
 	public void setDaughter(Expression daughter) {
-		this.daughter[0]= daughter;		
-
+		this.daughter[0]= daughter;
 	}
 	
 	public Object getData() {
@@ -70,6 +62,6 @@ public abstract class Expression {
 		
 	}
 
-    public abstract double calculerValeur();
+    public abstract double evaluer();
 
 }
