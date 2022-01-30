@@ -15,7 +15,7 @@ public class NoeudInterne extends Expression {
     public NoeudInterne(Expression filsG, Expression filsD, char operateurBinaire) {
     	this.filsG=filsG;
     	this.filsD=filsD;
-    	this.operateurBinaire=operateurBinaire;
+    	this.operateurBinaire = operateurBinaire;
     }
     
     /**
