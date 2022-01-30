@@ -139,7 +139,7 @@
 											"model": {
 												"$ref": "AAAAAAF+rGIQ7wsenK8="
 											},
-											"font": "Arial;13;0",
+											"font": "Arial;13;2",
 											"left": 365,
 											"top": 176,
 											"width": 119,
@@ -1736,7 +1736,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF+rF+9LQrx8/w="
 							},
-							"name": "executer"
+							"name": "executer",
+							"isAbstract": true
 						}
 					],
 					"isAbstract": true
